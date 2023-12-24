@@ -37,7 +37,6 @@ const PaymentSchema = new Schema<
     amount: { type: Number, required: true },
     currency: { type: String, required: true },
     description: { type: String, required: true },
-    status: { type: String, required: true },
     paymentMethod: { type: String, required: true },
     createdAt: { type: Date, required: true },
     updatedAt: { type: Date, required: true },
