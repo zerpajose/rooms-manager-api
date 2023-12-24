@@ -10,6 +10,7 @@ export interface IPayment {
   paymentMethod: string;
   createdAt: Date;
   updatedAt: Date;
+  deletedAt?: Date;
 }
 interface IPaymentDocument extends IPayment, Document {}
 type IPaymentModel = Model<IPaymentDocument>;
@@ -40,6 +41,7 @@ const PaymentSchema = new Schema<
     paymentMethod: { type: String, required: true },
     createdAt: { type: Date, required: true },
     updatedAt: { type: Date, required: true },
+    deletedAt: { type: Date },
   }
 );
 
